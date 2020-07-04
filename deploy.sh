@@ -16,7 +16,7 @@ if [ -z "$GITHUB_TOKEN" ]; then
   githubUrl=git@github.com:tanbingqian/blog.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://xugaoyi:${GITHUB_TOKEN}@github.com/xugaoyi/vuepress-theme-vdoing.git
+  githubUrl=https://tanbingqian:${GITHUB_TOKEN}@github.com/tanbingqian/vuepress-theme-vdoing.git
   git config --global user.name "tanbingqian"
   git config --global user.email "1729020330@qq.com"
 fi
@@ -26,7 +26,7 @@ git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github
 
 # deploy to coding
-# echo 'www.xugaoyi.com\nxugaoyi.com' > CNAME  # 自定义域名
+# echo 'www.tanbingqian.com\ntanbingqian.com' > CNAME  # 自定义域名
 # if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
 #   codingUrl=git@e.coding.net:xgy/xgy.git
 # else
